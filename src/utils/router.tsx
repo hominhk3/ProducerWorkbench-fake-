@@ -3,6 +3,14 @@ export const ROUTER = {
     HOME: "",
     SETTING: "/setting",
     MUSIC: "/music",
-    FILTERPRODUCER: "/filterProducer"
+    FILTERPRODUCER: "/filterProducer",
+    LOGIN:"/login",
+    SIGNUP:"/signup",
+    RESETPASSWORD:"/resetpassword",
+    PORTFOLIO:"/portfolio",
+    DASHBOARD:"/dashboard",
+    CREATEPROJECT:"/createproject",
+    PROJECTDETAIL:"/projectdetail",
+    MILESTONE:"/milistone"
   }
 }
