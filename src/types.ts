@@ -36,6 +36,15 @@ export interface AudioFile {
     commentCount: number;
 }
 
+export interface Contract {
+    partyA: string;
+    partyB: string;
+    scopeSummary: string;
+    totalFee: number;
+    paymentType: 'full' | 'milestone';
+    status: 'Đã ký' | 'Chờ ký';
+}
+
 export interface Project {
   id: number;
   name: string;
@@ -43,11 +52,17 @@ export interface Project {
   imageUrl: string;
   status: string;
   progress: number;
-  totalFee: number;
-  balance: number;
   members: Member[];
   splits: Split[];
   milestones: Milestone[];
   transactions: Transaction[];
   files: AudioFile[];
+  contract: Contract | null;
+}
+
+export interface Split {
+  memberId: number;
+  job: string;
+  amount: number; // Tên mới đã được đổi
+  milestoneId?: number;
 }

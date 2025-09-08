@@ -12,6 +12,16 @@ import DashboardPage from "./pages/DashboardPage"
 import CreateProjectPage from "./pages/CreateProjectPage"
 import ProjectDetailsPage from "./pages/ProjectDetailsPage"
 import MilestoneDetailsPage from "./pages/MilestoneDetailsPage"
+import UserProfile from "./pages/user/UserProfile"
+import ProducerList from "./pages/ProducerList"
+import UpdateProducer from "./pages/user/UpdateProducer"
+import ComplaintList from "./pages/ComplaintList"
+import ContractManager from "./pages/ContractManage"
+import ContractDetail from "./pages/ContractDetail"
+import HomePage2 from "./pages/HomePage2"
+import ContractManage from "./pages/ContractManage"
+import CreateContractPage from "./pages/CreateContractPage"
+import SplitSheetPage from "./pages/SplitSheetPage"
 
 const RenderUserRouter = () => {
   const location = useLocation();
@@ -66,6 +76,43 @@ const RenderUserRouter = () => {
         <Route
           path={ROUTER.USER.MILESTONE}
           element={<MilestoneDetailsPage/>}
+          />
+
+          <Route
+          path={ROUTER.USER.HOMEPAGE}
+          element={<HomePage2 />}
+        />
+        <Route
+          path={ROUTER.USER.PROFILE}
+          element={<UserProfile />}
+        />
+        <Route
+          path={ROUTER.USER.PRODUCERLIST}
+          element={<ProducerList />}
+        />
+        <Route
+          path={ROUTER.USER.UPDATEPRODUCER}
+          element={<UpdateProducer />}
+        />
+        <Route
+          path={ROUTER.USER.COMPLAINTLIST}
+          element={<ComplaintList />}
+        />
+        <Route
+          path={ROUTER.USER.CONTRACTMANAGE}
+          element={<ContractManager />}
+        />
+        <Route
+          path={ROUTER.USER.CONTRACTDETAIL}
+          element={<ContractDetail />}
+        />
+        <Route
+          path={ROUTER.USER.CONTRACT}
+          element={<CreateContractPage />}
+        />
+        <Route
+          path={ROUTER.USER.SPLITMONEY}
+          element={<SplitSheetPage />}
         />
       </Routes>
     </div>

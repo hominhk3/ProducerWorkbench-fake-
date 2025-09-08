@@ -9,11 +9,11 @@ const dashboardData = {
     { id: 4, label: 'Hóa đơn chưa trả', value: '3', icon: <FiFileText /> },
   ],
   projects: [
-    { id: 1, name: 'Starlight Vocal Mix', client: 'Luna', status: 'Chờ phản hồi', progress: 80, members: ['https://i.pravatar.cc/150?img=1', 'https://i.pravatar.cc/150?img=2'] },
+    { id: 1, name: 'Starlight Vocal Mix', client: 'Luna', status: 'Demo', progress: 80, members: ['https://i.pravatar.cc/150?img=1', 'https://i.pravatar.cc/150?img=2'] },
     { id: 2, name: 'Summer Vibe EP', client: 'ChillVibes Records', status: 'Mixing', progress: 60, members: ['https://i.pravatar.cc/150?img=3', 'https://i.pravatar.cc/150?img=4', 'https://i.pravatar.cc/150?img=5'] },
     { id: 3, name: 'Podcast Theme Song', client: 'The Digital Nomad', status: 'Hoàn thành', progress: 100, members: ['https://i.pravatar.cc/150?img=6'] },
     { id: 4, name: 'Lo-fi Beat Pack Vol. 3', client: 'BeatCo', status: 'Làm beat', progress: 45, members: ['https://i.pravatar.cc/150?img=1'] },
-    { id: 5, name: 'Cinematic Score "Odyssey"', client: 'Indie Films', status: 'Chờ phản hồi', progress: 95, members: ['https://i.pravatar.cc/150?img=7', 'https://i.pravatar.cc/150?img=8'] },
+    { id: 5, name: 'Cinematic Score "Odyssey"', client: 'Indie Films', status: 'Demo', progress: 95, members: ['https://i.pravatar.cc/150?img=7', 'https://i.pravatar.cc/150?img=8'] },
     { id: 6, name: 'Ad Music for "Nova"', client: 'Adgency', status: 'Mastering', progress: 90, members: ['https://i.pravatar.cc/150?img=9'] },
   ],
   tasks: [
@@ -29,7 +29,7 @@ const dashboardData = {
 };
 
 const statusColors: { [key: string]: string } = {
-  'Chờ phản hồi': 'bg-yellow-500/20 text-yellow-400',
+  'Demo': 'bg-yellow-500/20 text-yellow-400',
   'Mixing': 'bg-blue-500/20 text-blue-400',
   'Hoàn thành': 'bg-green-500/20 text-green-400',
   'Làm beat': 'bg-teal-500/20 text-teal-400',

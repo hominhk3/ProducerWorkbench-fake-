@@ -1,6 +1,7 @@
 export const ROUTER = {
   USER: {
-    HOME: "",
+    HOME: "/home",
+    HOMEPAGE:"",
     SETTING: "/setting",
     MUSIC: "/music",
     FILTERPRODUCER: "/filterProducer",
@@ -11,6 +12,14 @@ export const ROUTER = {
     DASHBOARD:"/dashboard",
     CREATEPROJECT:"/createproject",
     PROJECTDETAIL:"/projectdetail",
-    MILESTONE:"/milistone"
+    MILESTONE:"/milistone",
+    PROFILE: "/profile",
+    PRODUCERLIST:"/listProducer",
+    UPDATEPRODUCER:"/updateProducer",
+    COMPLAINTLIST: "/complaintList",
+    CONTRACTMANAGE: "/contractManage",
+    CONTRACTDETAIL: "/contractDetail",
+    CONTRACT:"/createcontract",
+    SPLITMONEY:"/splitmoney"
   }
 }
