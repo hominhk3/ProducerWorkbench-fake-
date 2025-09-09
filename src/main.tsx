@@ -7,6 +7,7 @@ import { ThemeProvider } from "./component/ThemeContext";
 import SakuraRain from "./component/SakuraRain";
 import ClickSpark from "./component/ClickSpark";
 import SplashCursor from "./component/cursor/SplashCursor";
+import ScrollToTop from "./component/ScrollToTop";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <SplashCursor/>
         <SakuraRain />
         <RouterCustom />
+        <ScrollToTop />
       </ClickSpark>
     </ThemeProvider>
   </BrowserRouter>
