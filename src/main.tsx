@@ -6,14 +6,14 @@ import { ThemeProvider } from "./component/ThemeContext";
 // import TextCursor from "./component/cursor/TextCursor";
 import SakuraRain from "./component/SakuraRain";
 import ClickSpark from "./component/ClickSpark";
-// import SplashCursor from "./component/cursor/SplashCursor";;
+import SplashCursor from "./component/cursor/SplashCursor";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <ThemeProvider>
       <ClickSpark>
         {/* <TextCursor text="⚛️" /> */}
-        {/* <SplashCursor/> */}
+        <SplashCursor/>
         <SakuraRain />
         <RouterCustom />
       </ClickSpark>

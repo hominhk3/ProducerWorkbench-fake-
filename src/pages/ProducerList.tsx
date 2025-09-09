@@ -129,38 +129,10 @@ const Pill: React.FC<
   );
 };
 
-const Header: React.FC = () => {
-  return (
-    <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-[#0B1320]/70 bg-[#0B1320]/95 border-b border-white/5">
-      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-2.5 h-2.5 rounded-sm bg-fuchsia-500" />
-          <span className="font-semibold">ProdMatch</span>
-        </div>
-
-        <nav className="hidden md:flex items-center gap-6 text-sm text-slate-300">
-          <a className="hover:text-white" href="#">Tìm Nhà Sản Xuất</a>
-          <a className="hover:text-white" href="#">Cách Hoạt Động</a>
-          <a className="hover:text-white" href="#">Dành Cho Producer</a>
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <button className="rounded-md border border-white/10 px-3 py-1.5 text-sm hover:bg-white/5">
-            Đăng nhập
-          </button>
-          <button className="rounded-md bg-fuchsia-600 px-3 py-1.5 text-sm hover:bg-fuchsia-700">
-            Đăng ký
-          </button>
-        </div>
-      </div>
-    </header>
-  );
-};
-
 const SearchHero: React.FC = () => {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-8">
-      <div className="rounded-2xl border border-white/10 bg-[#0F1724] p-6">
+    <section className="mx-auto max-w-6xl">
+      <div className="rounded-2xl border border-white/10 bg-[#0F1724] p-6 py-5">
         <h1 className="text-2xl md:text-3xl font-bold">
           Tìm Producer phù hợp cho âm nhạc của bạn
         </h1>
@@ -306,31 +278,11 @@ const GridSection: React.FC = () => {
   );
 };
 
-const Footer: React.FC = () => {
-  return (
-    <footer className="border-t border-white/10 py-8 text-sm text-slate-400">
-      <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <div className="w-2.5 h-2.5 rounded-sm bg-fuchsia-500" />
-          <span>© 2025 ProdMatch</span>
-        </div>
-        <nav className="flex items-center gap-4">
-          <a className="hover:text-white" href="#">Điều khoản</a>
-          <a className="hover:text-white" href="#">Quyền riêng tư</a>
-          <a className="hover:text-white" href="#">Hỗ trợ</a>
-        </nav>
-      </div>
-    </footer>
-  );
-};
-
 const ProducerList: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0B1320] text-white">
-      <Header />
       <SearchHero />
       <GridSection />
-      <Footer />
     </div>
   );
 };

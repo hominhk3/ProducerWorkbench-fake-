@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FiFileText, FiPlus, FiTrash2 } from 'react-icons/fi';
+import { FiFileText, FiPlus, FiTrash2, FiArrowLeft } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 interface Milestone {
   id: number;
@@ -68,14 +69,28 @@ function CreateContractPage() {
   const handleSubmit = () => {
       console.log("Contract Data:", contract);
       alert("Hợp đồng đã được tạo!");
+      window.location.href = "/projectDetail";
   }
 
   return (
     <div className="bg-dark-bg min-h-screen font-inter text-text-primary p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
+        
+        {/* Nút quay lại */}
+        <div className="mb-6">
+          <Link 
+            to="/projectDetail" 
+            className="inline-flex items-center gap-2 text-gray-300 hover:text-white font-medium transition"
+          >
+            <FiArrowLeft />
+            Quay lại
+          </Link>
+        </div>
+
         <h1 className="text-4xl font-bold text-white mb-8">Tạo Hợp đồng Mới</h1>
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
+          {/* Form bên trái */}
           <div className="bg-dark-surface p-6 rounded-2xl border border-border-color space-y-8">
             <div>
                 <h2 className="text-xl font-bold text-white mb-4">Phần A: Thông tin Cơ bản</h2>
@@ -114,6 +129,7 @@ function CreateContractPage() {
             </div>
           </div>
           
+          {/* Preview bên phải */}
           <div className="bg-dark-surface p-8 rounded-2xl border border-border-color">
               <div className="flex items-center text-xl font-bold text-white mb-6">
                 <FiFileText className="mr-3 text-accent"/>
@@ -142,6 +158,8 @@ function CreateContractPage() {
               </div>
           </div>
         </div>
+
+        {/* Save button */}
         <div className="flex justify-end mt-8">
             <button onClick={handleSubmit} className="bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-500 transition-colors">
                 Lưu Hợp đồng

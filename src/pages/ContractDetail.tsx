@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
-import {
-  FileText,
-  Eye,
-  Download,
-  Edit,
-  Share2,
-  FileDown,
-} from "lucide-react";
+import { FileText, Eye, Download, Edit, Share2, FileDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ContractDetail() {
   return (
@@ -20,10 +14,16 @@ export default function ContractDetail() {
         <div>
           <h1 className="text-3xl font-bold">Album Single - Pop 2025</h1>
           <p className="text-slate-400 text-sm">
-            Xem chi tiết hợp đồng, cột mốc, tiến độ, thanh toán và lịch sử chỉnh sửa.
+            Xem chi tiết hợp đồng, cột mốc, tiến độ, thanh toán và lịch sử chỉnh
+            sửa.
           </p>
         </div>
         <div className="flex gap-3">
+          <Link to={"/contractManage"}>
+            <button className="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-90 transition flex items-center gap-2">
+              <FileText size={18} /> Quản lý hợp đồng
+            </button>
+          </Link>
           <button className="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-90 transition flex items-center gap-2">
             <Share2 size={18} /> Chia sẻ
           </button>
@@ -94,9 +94,12 @@ export default function ContractDetail() {
             <h2 className="text-xl font-semibold mb-3">Phạm vi & Bàn giao</h2>
             <p className="text-sm text-slate-400 mb-2">Số vòng sửa: 2</p>
             <p className="text-sm">WAV 24bit, MP3 320kbps, Stems</p>
-            <p className="text-sm text-slate-400 mt-2">Tempo: 120 BPM / C# Minor</p>
             <p className="text-sm text-slate-400 mt-2">
-              Ghi chú kỹ thuật: Không clip, peak -1dBTP, LUFS -14 cho bản phân phối
+              Tempo: 120 BPM / C# Minor
+            </p>
+            <p className="text-sm text-slate-400 mt-2">
+              Ghi chú kỹ thuật: Không clip, peak -1dBTP, LUFS -14 cho bản phân
+              phối
             </p>
           </motion.div>
 
@@ -110,11 +113,29 @@ export default function ContractDetail() {
             <h2 className="text-xl font-semibold mb-4">Cột mốc & Tiến độ</h2>
             <div className="space-y-3">
               {[
-                { name: "Demo ý tưởng", date: "30/08/2025", money: "6.000.000₫", progress: 20 },
-                { name: "Thu âm & Sản xuất", date: "10/09/2025", money: "30.000.000₫", progress: 60 },
-                { name: "Mix & Master", date: "18/09/2025", money: "24.000.000₫", progress: 0 },
+                {
+                  name: "Demo ý tưởng",
+                  date: "30/08/2025",
+                  money: "6.000.000₫",
+                  progress: 20,
+                },
+                {
+                  name: "Thu âm & Sản xuất",
+                  date: "10/09/2025",
+                  money: "30.000.000₫",
+                  progress: 60,
+                },
+                {
+                  name: "Mix & Master",
+                  date: "18/09/2025",
+                  money: "24.000.000₫",
+                  progress: 0,
+                },
               ].map((m, i) => (
-                <div key={i} className="bg-slate-800 p-3 rounded-xl border border-white/5">
+                <div
+                  key={i}
+                  className="bg-slate-800 p-3 rounded-xl border border-white/5"
+                >
                   <div className="flex justify-between items-center">
                     <p className="font-medium">{m.name}</p>
                     <p className="text-indigo-400 font-semibold">{m.money}</p>
@@ -141,16 +162,20 @@ export default function ContractDetail() {
             transition={{ delay: 0.4 }}
             className="p-5 rounded-2xl bg-slate-900 border border-white/10 shadow-lg"
           >
-            <h2 className="text-xl font-semibold mb-3">Xem trước văn bản hợp đồng</h2>
+            <h2 className="text-xl font-semibold mb-3">
+              Xem trước văn bản hợp đồng
+            </h2>
             <p className="text-sm text-slate-300 mb-2">
-              Điều 1 - Phạm vi công việc: Producer chịu trách nhiệm sản xuất 1 bản thu âm thể loại Pop,
-              bao gồm thu âm, chỉnh sửa, mix và master.
+              Điều 1 - Phạm vi công việc: Producer chịu trách nhiệm sản xuất 1
+              bản thu âm thể loại Pop, bao gồm thu âm, chỉnh sửa, mix và master.
             </p>
             <p className="text-sm text-slate-300 mb-2">
-              Điều 2 - Thời hạn: Tổng thời gian thực hiện dự án 30-45 ngày kể từ ngày hiệu lực.
+              Điều 2 - Thời hạn: Tổng thời gian thực hiện dự án 30-45 ngày kể từ
+              ngày hiệu lực.
             </p>
             <p className="text-sm text-slate-300">
-              Điều 3 - Thanh toán: 40% đặt cọc, 60% khi bàn giao master cuối cùng.
+              Điều 3 - Thanh toán: 40% đặt cọc, 60% khi bàn giao master cuối
+              cùng.
             </p>
           </motion.div>
         </div>

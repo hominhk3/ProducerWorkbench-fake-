@@ -2,10 +2,8 @@ import React from "react";
 import {
   FileText,
   Calendar,
-  DollarSign,
   ShieldCheck,
   Search,
-  Plus,
   Eye,
   Edit,
   Trash2,
@@ -20,6 +18,7 @@ import {
   Cookie,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ContractManager: React.FC = () => {
   const contracts = [
@@ -198,9 +197,11 @@ const ContractManager: React.FC = () => {
                         </button>
                       )}
                       {c.actions.includes("Chỉnh sửa") && (
-                        <button className="px-2 py-1 bg-gray-700 rounded-md flex items-center gap-1 hover:bg-purple-600/50">
-                          <Edit className="w-4 h-4" /> Chi tiết
-                        </button>
+                        <Link to={"/contractDetail"}>
+                          <button className="px-2 py-1 bg-gray-700 rounded-md flex items-center gap-1 hover:bg-purple-600/50">
+                            <Edit className="w-4 h-4" /> Chi tiết
+                          </button>
+                        </Link>
                       )}
                       {c.actions.includes("Xóa") && (
                         <button className="px-2 py-1 bg-gray-700 rounded-md flex items-center gap-1 hover:bg-red-600/50">

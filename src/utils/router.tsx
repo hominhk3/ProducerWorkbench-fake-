@@ -9,17 +9,17 @@ export const ROUTER = {
     SIGNUP:"/signup",
     RESETPASSWORD:"/resetpassword",
     PORTFOLIO:"/portfolio",
-    DASHBOARD:"/dashboard",
-    CREATEPROJECT:"/createproject",
-    PROJECTDETAIL:"/projectdetail",
-    MILESTONE:"/milistone",
-    PROFILE: "/profile",
+    PROJECTMANAGE:"/projectManage",
+    CREATEPROJECT:"/createProject",
+    PROJECTDETAIL:"/projectDetail",
+    MILESTONE:"/milestone",
+    PROFILE: "/userProfile",
     PRODUCERLIST:"/listProducer",
     UPDATEPRODUCER:"/updateProducer",
     COMPLAINTLIST: "/complaintList",
     CONTRACTMANAGE: "/contractManage",
     CONTRACTDETAIL: "/contractDetail",
     CONTRACT:"/createcontract",
-    SPLITMONEY:"/splitmoney"
+    SPLITMONEY:"/splitMoney"
   }
 }
