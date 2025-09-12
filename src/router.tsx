@@ -22,6 +22,7 @@ import CreateContractPage from "./pages/CreateContractPage";
 import SplitSheetPage from "./pages/SplitSheetPage";
 import MasterLayout from "./pages/user/theme/MasterLayout";
 import ProjectManage from "./pages/ProjectManage";
+import LoadingPage from "./component/loading/LoadingPage";
 
 const RenderUserRouter = () => {
   const location = useLocation();
@@ -72,6 +73,7 @@ const RenderUserRouter = () => {
           />
           <Route path={ROUTER.USER.CONTRACT} element={<CreateContractPage />} />
           <Route path={ROUTER.USER.SPLITMONEY} element={<SplitSheetPage />} />
+          <Route path={ROUTER.USER.LOADINGPAGE} element={<LoadingPage />} />
         </Route>
         <Route path={ROUTER.USER.LOGIN} element={<LoginPage />} />
         <Route path={ROUTER.USER.SIGNUP} element={<SignUpPage />} />

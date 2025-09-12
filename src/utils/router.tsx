@@ -20,6 +20,7 @@ export const ROUTER = {
     CONTRACTMANAGE: "/contractManage",
     CONTRACTDETAIL: "/contractDetail",
     CONTRACT:"/createcontract",
-    SPLITMONEY:"/splitMoney"
+    SPLITMONEY:"/splitMoney",
+    LOADINGPAGE:"/loadingPage"
   }
 }
